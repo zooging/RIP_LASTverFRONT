@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Светло-синий фон */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Стили для общих полей ввода и кнопок */
+input{
+  height: 50px;
+  padding: 6px;
+  font-size: 14px;
+  margin: 7px;
+  border: solid 1px #007bff;
+}
+
+button {
+  height: 40px;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Измененные стили для общих кнопок при наведении */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для кнопки "Показать все задачи" */
+.list-container button {
+  width: 200px; /* Ширина кнопки */
+}
+
+/* Стили для кнопок "Редактировать", "Сохранить" и "Удалить" в списке задач */
+.list-container button.edit,
+.list-container button.save,
+.list-container button.delete {
+  margin-left: 10px; /* Отступ слева между кнопками */
+}
+
+/* Стили для кнопок "Редактировать", "Сохранить" и "Удалить" в чате */
+.chat-container button.edit,
+.chat-container button.save,
+.chat-container button.delete {
+  margin-left: 10px; /* Отступ слева между кнопками */
+}
+
+
+/* Стили для поля ввода задач */
+.list-container input {
+  width: 80%;
+}
+
+/* Стили для поля ввода чата */
+.chat-container input {
+  width: 250px; /* Ширина учитывает отступы и рамку */
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff; /* Деловой светло-синий цвет текста */
+}
+
+h2, h3 {
+  color: #007bff; /* Цвет заголовков */
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+li span {
+  display: block;
+  margin-top: 5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #333; /* Черный цвет текста */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.task-input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-input:focus {
+  border-color: #007bff; /* Изменение цвета рамки при фокусе */
+}
+
+/* Измененные стили для поля ввода чата */
+.chat-input {
+  width: calc(100% - 20px); /* Ширина учитывает отступы и рамку */
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* Дополнительные стили для поля ввода чата */
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Дополнительные стили для расположения поля ввода чата внутри контейнера */
+.chat-container .chat-input {
+  width: calc(100% - 20px);
+  margin-top: 10px;
+}
+
+/* Стили для кнопки "Отправить" в чате */
+.chat-container button {
+  width: 65px;
+  height: 40px; /* Высота кнопки */
+  padding: 8px; /* Внутренний отступ кнопки */
+  font-size: 10px; /* Размер шрифта кнопки */
+  margin-top: 10px; /* Отступ сверху кнопки */
+  background-color: #007bff; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста кнопки */
+  border: none; /* Убрать границу кнопки */
+  border-radius: 4px; /* Скругление углов кнопки */
+  cursor: pointer; /* Курсор при наведении на кнопку */
+}
+
+/* Измененные стили для кнопки "Отправить" в чате при наведении */
+.chat-container button:hover {
+  background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}
+
